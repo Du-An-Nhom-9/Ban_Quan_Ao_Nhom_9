@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeLayoutComponent } from './layouts/home-layout/home-layout.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { HomePagesComponent } from './pages/home-pages/home-pages.component';
+import { DetailComponent } from './pages/detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeLayoutComponent,
     AdminLayoutComponent,
-    HomePagesComponent
+    HomePagesComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
