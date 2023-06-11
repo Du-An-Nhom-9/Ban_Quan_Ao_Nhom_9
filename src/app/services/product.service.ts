@@ -6,9 +6,21 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  API_URL:string='http://localhost:8080/api'
-  constructor(private http:HttpClient) { }
-  product(product:any):Observable<any>{
-    return this.http.post<any>(`${this.API_URL}/products`,product)
+  API_URL: string = 'http://localhost:8080/api/products'
+  constructor(private http: HttpClient) { }
+  getProducts(): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(`${this.API_URL}`)
+  }
+  deleteProduct(id: any): Observable<IProduct> {
+    return this.http.delete<IProduct>(`${this.API_URL}/${id}`)
+  }
+  getProduct(id: any): Observable<IProduct> {
+    return this.http.get<IProduct>(`${this.API_URL}/${id}`)
+  }
+  addProduct(product: IProduct): Observable<IProduct> {
+    return this.http.post<IProduct>(`${this.API_URL}`, product)
+  }
+  updateProduct(product: IProduct): Observable<IProduct> {
+    return this.http.put<IProduct>(`${this.API_URL}/${product._id}`, product)
   }
 }
