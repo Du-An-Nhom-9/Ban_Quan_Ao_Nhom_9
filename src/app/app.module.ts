@@ -10,6 +10,8 @@ import { HomePagesComponent } from './pages/home-pages/home-pages.component';
 import { DasboardComponent } from './pages/admin/dasboard/dasboard.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ProductAddComponent } from './pages/product-add/product-add.component';
+import { HeardComponent } from './components/heard/heard.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ProductAddComponent } from './pages/product-add/product-add.component';
     HomePagesComponent,
     DasboardComponent,
     PageNotFoundComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    HeardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

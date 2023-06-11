@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IProduct } from 'src/app/interface/Product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-home-pages',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-pages.component.scss']
 })
 export class HomePagesComponent {
-
+  products!: IProduct[]
+  constructor(private productService: ProductService) {
+    this.productService.getProducts().subscribe(data => {
+      this.products = data
+      console.log(data);
+      
+    })
+  }
 }
