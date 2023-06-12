@@ -1,0 +1,17 @@
+<div class="container">
+    <form [formGroup]="productForm" (ngSubmit)="onHandleSubmit()">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" formControlName="name" placeholder="Tên SP" class="form-control">
+        <label for="exampleInputEmail1" class="form-label">Images</label>
+        <input type="text" formControlName="img" placeholder="Ảnh" class="form-control">
+        <label for="exampleInputEmail1" class="form-label">Price</label>
+        <input type="number" formControlName="price" placeholder="Giá SP" class="form-control">
+        <label for="exampleInputEmail1" class="form-label">Comments</label>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                style="height: 100px" formControlName="description"></textarea>
+            <label for="floatingTextarea2">Comments</label>
+        </div>
+        <button class="btn btn-info bg-teal-300 mt-6 block mx-auto">Sửa</button>
+    </form>
+</div>
