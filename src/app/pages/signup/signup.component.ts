@@ -32,7 +32,7 @@ export class SignupComponent {
     if (this.formSignup.valid) {
       this.auth.signup(this.formSignup.value).subscribe(data => {
         console.log(data);
-        this.router.navigate(['/signin']);
+        this.router.navigate(['/signin'])
       });
     }
   }
