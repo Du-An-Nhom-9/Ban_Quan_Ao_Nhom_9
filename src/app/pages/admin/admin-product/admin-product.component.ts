@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { IProduct } from 'src/app/interfaces/Product';
 import {Location} from '@angular/common'
 import { ProductService } from 'src/app/services/product.service';
-import { IProduct } from 'src/app/interfaces/Product';
 @Component({
-  selector: 'app-dasboard',
-  templateUrl: './dasboard.component.html',
-  styleUrls: ['./dasboard.component.scss']
+  selector: 'app-admin-product',
+  templateUrl: './admin-product.component.html',
+  styleUrls: ['./admin-product.component.scss']
 })
-export class DasboardComponent {
+export class AdminProductComponent {
   products!: IProduct[]
   constructor(private productService: ProductService,private router:Router,private location:Location) {
     this.productService.getProducts().subscribe(data => {
@@ -16,14 +16,5 @@ export class DasboardComponent {
       console.log(data);
       
     })
-  }
-
- 
-
-  removeItem(id: any) {
-    if(confirm('Are you sure you want to remove')){
-      this.productService.deleteProduct(id).subscribe(() => {
-    })
-    }
   }
 }

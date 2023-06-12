@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Validators,FormBuilder} from '@angular/forms'
-import { IProduct } from 'src/app/interface/Product';
+import { Router } from '@angular/router';
+import { IProduct } from 'src/app/interfaces/Product';
 import { ProductService } from 'src/app/services/product.service';
 @Component({
   selector: 'app-product-add',
@@ -17,7 +18,8 @@ export class ProductAddComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private productService: ProductService) {
+    private productService: ProductService,
+    private router:Router,) {
 
   }
   onHandleSubmit() {
@@ -25,11 +27,12 @@ export class ProductAddComponent {
       name: this.productForm.value.name || "",
       price: this.productForm.value.price || 0,
       img: this.productForm.value.img || "",
-      decription: this.productForm.value.description ||"",
+      description:this.productForm.value.description || ""
     }
 
-    this.productService.(product).subscribe((product) => {
+    this.productService.addProduct(product).subscribe((product) => {
       console.log('product', product);
-    })
-  }
+      this.router.navigate(['admin/dashboard']);
+  })
+}
 }

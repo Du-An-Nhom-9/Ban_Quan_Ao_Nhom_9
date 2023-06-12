@@ -15,6 +15,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { AuthInterceptor } from './auth.interceptor';
+import { ProductEditComponent } from './pages/product-edit/product-edit.component';
+import { AdminProductComponent } from './pages/admin/admin-product/admin-product.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { DressesComponent } from './components/dresses/dresses.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { AuthInterceptor } from './auth.interceptor';
     HeardComponent,
     FooterComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    ProductEditComponent,
+    AdminProductComponent,
+    ProductDetailComponent,
+    DressesComponent
   ],
   imports: [
     BrowserModule,
