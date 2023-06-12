@@ -12,12 +12,14 @@ import { AuthGuard } from './auth.guard';
 import { ProductEditComponent } from './pages/product-edit/product-edit.component';
 import { AdminProductComponent } from './pages/admin/admin-product/admin-product.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 const routes: Routes = [
   {
     path:'',component:HomeLayoutComponent,children:[
       {path:'',component:HomePagesComponent},
       {path:'signin',component:SigninComponent},
+      {path:'cart/:id',component:CartComponent},
       {path:'detail/:id',component:ProductDetailComponent},
       {path:'signup',component:SignupComponent}
     ]
