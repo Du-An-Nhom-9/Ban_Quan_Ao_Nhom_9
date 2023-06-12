@@ -8,18 +8,5 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent {
-  product!: IProduct;
-  constructor(
-    private router: ActivatedRoute,
-    private productService: ProductService
-  ) {
-    this.router.paramMap.subscribe((params => {
-      const id = String(params.get('id'));
-      console.log(id);
-      
-      this.productService.getProduct(id).subscribe(data => {
-        this.product = data;
-      }, error => console.log(error.message))
-    }))
-  }
+ 
 }
