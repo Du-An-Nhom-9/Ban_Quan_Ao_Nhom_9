@@ -14,6 +14,9 @@ export class ProductService {
   getProduct(id: any): Observable<IProduct> {
     return this.http.get<IProduct>(`${this.API_URL}/${id}`)
   }
+  deleteProduct(id: any): Observable<IProduct> {
+    return this.http.delete<IProduct>(`${this.API_URL}/${id}`)
+  }
   addProduct(product: IProduct): Observable<IProduct> {
     return this.http.post<IProduct>(`${this.API_URL}`, product)
   }
