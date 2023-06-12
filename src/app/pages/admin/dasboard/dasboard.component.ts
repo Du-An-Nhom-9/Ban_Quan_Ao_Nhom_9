@@ -18,12 +18,4 @@ export class DasboardComponent {
     })
   }
 
- 
-
-  removeItem(id: any) {
-    if(confirm('Are you sure you want to remove')){
-      this.productService.deleteProduct(id).subscribe(() => {
-    })
-    }
-  }
 }
