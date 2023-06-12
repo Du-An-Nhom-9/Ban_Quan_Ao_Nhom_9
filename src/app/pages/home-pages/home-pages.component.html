@@ -1,0 +1,77 @@
+
+<main>
+    <app-dresses></app-dresses>
+    <section>
+        <h1 class="text-[30px] text-center pt-24 pb-48 ">FEATURED PRODUCTS</h1>
+        <div>
+            <div class="max-w-7xl mx-auto px-5">
+                <div class="grid grid-cols-4 gap-5 pt-[35px]">
+                    <div *ngFor="let item of products; index as i">
+                        <div class="group relative overflow-hidden ">
+                           
+                                <a href="./detail.html">
+                                    <img class="h-[355px] hover:scale-125 transition-all duration-500 cursor-pointer "
+                                        src="{{item.img}}" alt="">
+                                </a>
+                            <div class="absolute bottom-0 bg-[#00000032] transition ease-in-out duration-300 text-white flex justify-between items-center p-3 w-full h-full transform translate-y-full group-hover:translate-y-0 ">
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-[16px]  font-[600] open_sans pt-6 pb-6 hover:text-red-700"><a href="detail/{{item._id}}">{{item.name}}
+                                    </a></h3>
+                            <div class="flex justify-between items-center">
+                                <div class="space-x-2">
+                                    <span
+                                        class="text-[16px] text-[#777777]  font-[600] open_sans">${{item.price}}</span>
+                                </div>
+                                <div class="">
+                                    <a href=""><button class="bg-cyan-500 text-white w-[132px] h-[50px] hover:bg-sky-700 ...">
+                                        DRESSES
+                                      </button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="text-center text-[30px] font-normal pt-36 pb-36">OUT BL0G</h1>
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="flex gap-28">
+                <div>
+                    <img class="h-[243px] hover:scale-125 transition-all duration-500 cursor-pointer" src="https://cdn.shopify.com/s/files/1/2672/5778/articles/blog-01_720x539.jpg?v=1514488158"
+                        alt="">
+                    <a href=""><p class="font-normal text-[16px] text-[#333333] pt-7 hover:text-red-700">Black Friday Guide:Best sales & Discount
+                        codes</p></a>
+                    <p class="text-[14px] font-normal text-[#555555] pt-3">By Nancy Ward on July 22, 2017</p>
+                    <p class="text-[13px] font-normal text-[#888888] pt-2">Duis ut velit gravida nibh bibendum
+                        commodo. Sus-pendisse pellentesque mattis augue id
+                        euismod. Inter-dum et malesuada fames</p>
+                </div>
+                <div>
+                    <img class="h-[243px] hover:scale-125 transition-all duration-500 cursor-pointer" src="https://cdn.shopify.com/s/files/1/2672/5778/articles/blog-02_720x539.jpg?v=1514488127"
+                        alt="">
+                    <a href=""><p class="font-normal text-[16px] text-[#333333] pt-7 hover:text-red-700">The White Sneakers Nearly Every Fashion Girls Own</p></a>
+                    <p class="text-[14px] font-normal text-[#555555] pt-3">by fashe-theme Admin on Dec 28,2017</p>
+                    <p class="text-[13px] font-normal text-[#888888] pt-2">Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod. Inter-dum et...</p>
+                </div>
+                <div>
+                    <img class="h-[243px] hover:scale-125 transition-all duration-500 cursor-pointer" src="https://cdn.shopify.com/s/files/1/2672/5778/articles/blog-03_720x539.jpg?v=1514488076"
+                        alt="">
+                    <a href=""><p class="font-normal text-[16px] text-[#333333] pt-7 hover:text-red-700">New York SS 2018 Street Style: By Annina Mislin
+                        codes</p></a>
+                    <p class="text-[14px] font-normal text-[#555555] pt-3">by fashe-theme Admin on Dec 28,2017
+                    </p>
+                    <p class="text-[13px] font-normal text-[#888888] pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis sed lorem dignissim vulputate nec cursus ante. Nunc sit...</p>
+                </div>
+            </div>
+            
+        </div>
+        
+
+    </section>
+
+</main>
+
